@@ -1,0 +1,257 @@
+:root {
+    --font-main: Medula One;
+}
+
+*,
+ ::before,
+ ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-main);
+}
+
+header {
+    background-color: white;
+    opacity: 0.9;
+    position: fixed;
+    width: 100%;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+header.opacity {
+    opacity: 0.5;
+}
+
+header .nav_wrapper {
+    display: flex;
+    align-items: center;
+    font-size: 37px;
+    color: #170D0B;
+    padding: 10px;
+    opacity: 0.9;
+}
+
+header .box {
+    margin: 10px;
+    width: 75px;
+    height: 75px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+}
+
+header .container-lignes {
+    width: 60px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+header div.box {
+    background-color: white;
+    opacity: 0.9;
+    z-index: 30;
+}
+
+header .ligne {
+    position: absolute;
+    border-radius: 10px;
+    width: 60px;
+    height: 5px;
+    background: #170D0B;
+}
+
+header .box .ligne:nth-child(1) {
+    top: 5px;
+}
+
+header .box .ligne:nth-child(2) {
+    top: 20px;
+}
+
+header .box .ligne:nth-child(3) {
+    top: 35px;
+}
+
+
+/* Animation */
+
+header .ligne:nth-child(1),
+.ligne:nth-child(3) {
+    transform: rotate(0deg);
+    transition: transform 0.4s ease-in-out, top 0.4s 0.4s ease-in-out;
+}
+
+header .ligne:nth-child(2) {
+    transition: opacity 0.4s 0.4s ease-in-out;
+}
+
+header .active .ligne:nth-child(1) {
+    top: 20px;
+    transform: rotate(45deg);
+}
+
+header .active .ligne:nth-child(2) {
+    transition: opacity 0.4s ease-in-out;
+    opacity: 0;
+}
+
+header .active .ligne:nth-child(3) {
+    top: 20px;
+    transform: rotate(-45deg);
+}
+
+header .active~.box {
+    margin-left: auto;
+}
+
+header p.boxMenu {
+    margin-left: auto;
+}
+
+header p.active {
+    display: none;
+}
+
+header ul {
+    position: absolute;
+    background-color: white;
+    right: 0;
+    font-size: 60px;
+    list-style: none;
+    padding: 20px;
+    display: none;
+    z-index: 30;
+}
+
+header a {
+    text-decoration: none;
+    color: #170D0B;
+    display: flex;
+    align-items: center;
+}
+
+header ul.active {
+    display: block;
+}
+
+header li {
+    border-radius: 8px;
+    padding: 3px;
+    margin: 0px 3px;
+}
+
+header li:hover,
+.here {
+    font-weight: bold;
+}
+
+header li.separation {
+    background-color: transparent;
+    display: none;
+}
+
+
+/* Bouton TOP */
+
+#back-to-top-btn {
+    z-index: 30;
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    font-size: 26px;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+    border: 3px solid #333;
+    border-radius: 3px;
+    opacity: 0.3;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-property: background-color, color;
+}
+
+#back-to-top-btn:hover,
+#back-to-top-btn:focus {
+    background-color: #333;
+    color: #fff;
+}
+
+.btnEntrance {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-name: btnEntrance;
+}
+
+@keyframes btnEntrance {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.btnExit {
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    animation-name: btnExit;
+}
+
+@keyframes btnExit {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+}
+
+
+/* Grand écran (>800px) */
+
+@media (min-width: 950px) {
+    header .box,
+    .boxMenu {
+        display: none;
+    }
+    header ul {
+        display: flex;
+        transform: translate(0px, -100px);
+        background-color: transparent;
+        justify-content: flex-end;
+        font-size: 40px;
+        height: 105px;
+        align-items: center;
+    }
+    header ul.active {
+        display: flex;
+    }
+    header p.logoName {
+        display: none;
+    }
+    header li:hover,
+    .here {
+        background-color: rgb(235, 229, 222);
+        font-weight: normal;
+    }
+    header li.separation {
+        display: block;
+    }
+    header li.separation:hover {
+        background-color: transparent;
+    }
+}

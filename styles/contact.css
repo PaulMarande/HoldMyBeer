@@ -1,0 +1,221 @@
+body {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 1, 0.3)), url("../images/fondContact.JPG");
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+}
+
+main {
+    padding-top: 115px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+
+/* Container left */
+
+.container__left {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+    max-width: 500px;
+    font-size: 3vw;
+}
+
+.container__left--heading {
+    height: 50%;
+}
+
+.container__left .container__left--heading h1 {
+    color: #fff;
+    font-size: 50px;
+}
+
+.container__left .container__left--heading p {
+    margin: 20px 0;
+    color: #f1f1f1;
+}
+
+.container__left .bubble-container {
+    position: relative;
+    background-color: #ff4618;
+    border-radius: 15px;
+    padding: 15px;
+    color: #fff;
+}
+
+.container__left .bubble-container::after {
+    content: "";
+    position: absolute;
+    left: 20%;
+    bottom: -20px;
+    width: 20px;
+    height: 20px;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+    background: #ff4618;
+}
+
+
+/* Container Form */
+
+form {
+    display: block;
+    width: 90%;
+    max-width: 730px;
+    background: #fff;
+    box-shadow: 2px 5px 21px -2px #565656;
+    padding: 40px;
+    border-radius: 29px;
+    color: #727272;
+    z-index: 5;
+    font-size: 2.5vw;
+}
+
+form h2 {
+    font-size: 35px;
+    margin-bottom: 60px;
+}
+
+form .form-control {
+    position: relative;
+    margin: 60px 0;
+    width: 100%;
+}
+
+form .form-control input {
+    display: block;
+    width: 100%;
+    background: transparent;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #000;
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid #ececed;
+    font-size: 2vw;
+}
+
+form .form-control input.alert-input {
+    border-bottom: 2px solid crimson;
+}
+
+form .form-control label {
+    position: absolute;
+    bottom: 10px;
+    transition: all 0.3s ease-in;
+}
+
+form .form-control input:focus+label,
+form .form-control input.active-input+label {
+    transform: translateY(-40px);
+}
+
+.content-form-radio {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 250px;
+}
+
+.form-control--radio {
+    display: flex;
+    align-items: center;
+}
+
+.form-control--radio input {
+    height: 25px;
+    width: 25px;
+    margin-right: 10px;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    margin: 30px 0 0;
+    padding: 15px;
+    background-color: #ff4618;
+    border-radius: 90px;
+    border: 0;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.table_wrapper {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    border: 2px solid rgb(172, 172, 172);
+    margin: 30px 0;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.384);
+}
+
+table {
+    width: 100%;
+    text-align: center;
+}
+
+th {
+    background-color: rgb(212, 212, 211);
+    color: rgb(124, 124, 124);
+    font-size: 25px;
+    font-weight: 100;
+}
+
+table tbody tr:not(:last-child) td {
+    border-bottom: 2px solid rgb(187, 187, 187);
+}
+
+td {
+    height: auto;
+    font-size: 20px;
+    color: white;
+    font-weight: lighter;
+}
+
+caption {
+    font-size: 30px;
+    color: white;
+    padding: 10px 10px;
+}
+
+@media screen and (max-width: 1141px) {
+    body {
+        height: 100%;
+        position: relative;
+    }
+    .bubble-container {
+        max-width: 800px;
+        margin-top: 30px;
+    }
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 0;
+    }
+    .container__left {
+        width: 90%;
+        align-items: center;
+        margin-right: 0;
+        margin-bottom: 50px;
+        max-width: none;
+        font-size: 6vw;
+    }
+    form {
+        font-size: 5.5vw;
+    }
+    form .form-control input {
+        font-size: 5vw;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 600px) {
+    form {
+        padding: 30px;
+    }
+}

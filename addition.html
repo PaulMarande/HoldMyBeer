@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="styles/header.css" />
+    <link rel="stylesheet" type="text/css" href="styles/addition.css" />
+    <link rel="stylesheet" type="text/css" href="styles/footer.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Medula+One&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HoldMyBeer</title>
+</head>
+
+<body>
+    <header class="main_header">
+        <nav class="main_navigation">
+            <div class="nav_wrapper">
+                <a href="accueil.html">
+                    <img src="images/Logo.svg" alt="Logo du site, une bière" width="75" height="75" />
+                    <p class="logoName">HoldMyBeer</p>
+                </a>
+                <p class="boxMenu">Menu</p>
+                <div class="box">
+                    <div class="container-lignes">
+                        <div class="ligne"></div>
+                        <div class="ligne"></div>
+                        <div class="ligne"></div>
+                    </div>
+                </div>
+            </div>
+            <ul class="lienMenu">
+                <li id="nav_bieres"><a href="bieres.html">Bières</a></li>
+                <li class="separation"> | </li>
+                <li id="nav_vins"><a href="vins.html">Vins</a></li>
+                <li class="separation"> | </li>
+                <li id="nav_cocktails"><a href="cocktails.html">Cocktails</a></li>
+                <li class="separation"> | </li>
+                <li id="nav_reouverture"><a href="reouverture.html">Réouverture J-</a></li>
+                <li class="separation"> | </li>
+                <li id="nav_addition" class="here"><a href="addition.html">L'addition SVP</a></li>
+                <li class="separation"> | </li>
+                <li id="nav_contact"><a href="contact.html">Nous Contacter</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form name="TheForm">
+            <div class="section-titre">
+                <h1>L'addition SVP</h1>
+                <h2>Estimation approximative de votre consommation</h2>
+            </div>
+            <div class="section-input">
+                <div>
+                    <input type="text" id="prenom" name="user_prenom" placeholder="Prénom" required>
+                </div>
+                <div>
+                    <input type="text" id="nom" name="user_nom" placeholder="Nom" required>
+                </div>
+                <div>
+                    <select id="boissons" name="user_boissons" required>
+                        <option value="">Choisissez une boisson</option>
+                        <option>Cocktail sans alcool - 2,50€</option>
+                        <option>Cocktail avec alcool - 3,50€</option>
+                        <option>Vin rouge - 3€</option>
+                        <option>Vin rosé - 2.5€</option>
+                        <option>Vin blanc - 3€</option>
+                        <option>Pinte de bière - 4€</option>
+                        <option>Demi-pinte de bière - 2,50€</option>
+                        <option>Shot - 3€</option>
+                    </select>
+                </div>
+            </div>
+            <div class="section-bouton">
+                <button type='button' class="button" onClick="ajouter()">Ajouter</button>
+                <button type='button' class="button" onClick="supprimer()">Tout supprimer</button>
+            </div>
+        </form>
+        <div class="ticket">
+            <div class="logo">
+                <img src="images/Logo.svg" alt="Logo du site, une bière" width="50" height="50" />
+                <p class="logoName point">HoldMyBeer</p>
+            </div>
+            <div class="date"></div>
+            <div class="ajouts">
+
+            </div>
+            <div class="total">
+                <div class="ligne"></div>
+                <div class="tva">
+                    <span class="texte">(Dont TVA 10% : </span>
+                    <span class="chiffre">0</span>
+                    <span class="texte">€)</span>
+                </div>
+                <div class="totalTTC">
+                    <span class="texte">Total TTC : </span>
+                    <span class="chiffre">0</span>
+                    <span class="texte">€</span>
+                </div>
+            </div>
+            <div class="message_visite partageons">
+                <p>----------------------------------------</p>
+                <p>Nous vous remercions pour votre visite</p>
+                <p>L'alcool est à consommer avec modération</p>
+                <p>----------------------------------------</p>
+            </div>
+        </div>
+        <button id="back-to-top-btn">↑</button>
+    </main>
+    <footer class="footer">
+        <div class="footer-left">
+            <a href="https://www.efrei.fr/"> © </a>
+            <a href="https://www.linkedin.com/in/antoine-cassaigne-3039261a0/" target="_blank">Antoine Cassaigne ·</a>
+            <a href="https://www.linkedin.com/in/marine-c%C3%A9l%C3%A9rault-0145901a0/" target=_blank>Marine Celeraut
+                ·</a>
+            <a href="https://www.linkedin.com/in/paul-marande-429733177" target=_blank>Paul Marande</a>
+
+        </div>
+        <div class="footer-right">
+            <p class="footer-links">
+                <a href="accueil.html">Accueil</a>
+                ·
+                <a href="propos.html">A propos</a>
+                ·
+                <a href="contact.html">Nous contacter</a>
+            </p>
+        </div>
+
+    </footer>
+    <script src="scripts/addition.js"></script>
+    <script src="scripts/header.js"></script>
+</body>
+
+</html>

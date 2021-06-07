@@ -1,0 +1,74 @@
+body {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 1, 0.3)), url("../images/fondPropos.JPG");
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    padding-top: 115px;
+    padding-bottom: 20px;
+}
+
+main .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+main .container div.photo {
+    width: 300px;
+    height: auto;
+    background-color: white;
+    margin: 30px 40px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main .container div.photo .punaise {
+    margin-top: -15px;
+    margin-bottom: 10px;
+}
+
+main .container div.photo:nth-child(1) {
+    transform: rotate(-10deg);
+}
+
+main .container div.photo:nth-child(2) {
+    transform: rotate(10deg);
+}
+
+main .container div.photo:nth-child(3) {
+    transform: rotate(-5deg);
+}
+
+main .container div.photo div {
+    margin: 10px 30px;
+}
+
+main .container div.photo h1 {
+    font-size: 30px;
+    font-weight: normal;
+}
+
+main .container div.photo p {
+    font-size: 25px;
+    font-weight: normal;
+}
+
+@media (min-width:1600px) {
+    main .container div.photo {
+        width: 20%;
+    }
+    main .container div.photo h1 {
+        font-size: 400%;
+    }
+    main .container div.photo p {
+        font-size: 300%;
+    }
+}
