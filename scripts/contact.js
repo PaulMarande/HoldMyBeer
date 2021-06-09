@@ -1,6 +1,6 @@
 //Animation Input
 const inputs = document.querySelectorAll("form .form-control input");
-
+//Ajouter un élément dans le formulaire de contact
 inputs.forEach((input) => {
   input.addEventListener("input", (e) => {
     if (e.target.value !== "") {
@@ -31,6 +31,7 @@ const checkRegex = (input, regex) => {
 checkRegex(inpEmail, regexEmail);
 checkRegex(inpTel, regexPhoneFr);
 
+//Ajouter un élément dans le tableau
 function ajouter() {
   var myForm = document.forms.TheForm;
 

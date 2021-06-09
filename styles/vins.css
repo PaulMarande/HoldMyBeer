@@ -14,10 +14,14 @@ main {
     text-align: center;
 }
 
+/* Taille de l'intro */
+
 .intro {
     font-size: 220%;
     color: white;
 }
+
+/*une mise en page pour les titres*/
 
 main h1 {
     font-size: 60px;
@@ -25,6 +29,8 @@ main h1 {
     margin: 40px auto;
     width: 100%;
 }
+
+/*Une mise en page des textes*/
 
 main p {
     color: white;
@@ -42,12 +48,16 @@ main .vin {
     padding: 5%;
 }
 
+/*les images des plats*/
+
 main .plat {
     display: flex;
     padding: 2% 5% 0 1%;
     width: 69%;
     text-align: right;
 }
+
+/*les images des verres de vin*/
 
 main .verre {
     padding: 1% 5% 0 7%;

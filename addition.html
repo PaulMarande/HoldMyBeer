@@ -51,12 +51,15 @@
                 <h2>Estimation approximative de votre consommation</h2>
             </div>
             <div class="section-input">
+                <!--Prénom-->
                 <div>
                     <input type="text" id="prenom" name="user_prenom" placeholder="Prénom" required>
                 </div>
+                <!--Nom-->
                 <div>
                     <input type="text" id="nom" name="user_nom" placeholder="Nom" required>
                 </div>
+                <!--Boisson-->
                 <div>
                     <select id="boissons" name="user_boissons" required>
                         <option value="">Choisissez une boisson</option>
@@ -71,33 +74,40 @@
                     </select>
                 </div>
             </div>
+            <!--Boutons Ajouter et Tout supprimer-->
             <div class="section-bouton">
                 <button type='button' class="button" onClick="ajouter()">Ajouter</button>
                 <button type='button' class="button" onClick="supprimer()">Tout supprimer</button>
             </div>
         </form>
+        <!--Tableau du ticket-->
         <div class="ticket">
             <div class="logo">
                 <img src="images/Logo.svg" alt="Logo du site, une bière" width="50" height="50" />
                 <p class="logoName point">HoldMyBeer</p>
             </div>
+            <!--Date-->
             <div class="date"></div>
+            <!--Emplacement pour ajouter des personnes-->
             <div class="ajouts">
 
             </div>
             <div class="total">
                 <div class="ligne"></div>
+                <!--Affichage TVA-->
                 <div class="tva">
                     <span class="texte">(Dont TVA 10% : </span>
                     <span class="chiffre">0</span>
                     <span class="texte">€)</span>
                 </div>
+                <!--Total-->
                 <div class="totalTTC">
                     <span class="texte">Total TTC : </span>
                     <span class="chiffre">0</span>
                     <span class="texte">€</span>
                 </div>
             </div>
+            <!--Message en bas du ticket-->
             <div class="message_visite partageons">
                 <p>----------------------------------------</p>
                 <p>Nous vous remercions pour votre visite</p>

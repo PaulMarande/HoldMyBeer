@@ -1,3 +1,5 @@
+/*Image de fond*/
+
 body {
     background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 1, 0.3)), url("../images/fondPropos.JPG");
     background-attachment: fixed;
@@ -6,10 +8,14 @@ body {
     width: 100%;
 }
 
+/*Décaler le corps de la page du header et du footer*/
+
 main {
     padding-top: 115px;
     padding-bottom: 20px;
 }
+
+/*Mise en page de nos présentations*/
 
 main .container {
     display: flex;
@@ -17,6 +23,8 @@ main .container {
     justify-content: center;
     flex-wrap: wrap;
 }
+
+/*Mise en page de nos cadres photos*/
 
 main .container div.photo {
     width: 300px;
@@ -29,6 +37,8 @@ main .container div.photo {
     align-items: center;
     flex-direction: column;
 }
+
+/*Image de la punaise pour fixer nos cadres*/
 
 main .container div.photo .punaise {
     margin-top: -15px;
@@ -47,19 +57,27 @@ main .container div.photo:nth-child(3) {
     transform: rotate(-5deg);
 }
 
+/*Placement de la photo*/
+
 main .container div.photo div {
     margin: 10px 30px;
 }
+
+/*Mise en page de nos noms*/
 
 main .container div.photo h1 {
     font-size: 30px;
     font-weight: normal;
 }
 
+/*Mise en page de nos descriptions*/
+
 main .container div.photo p {
     font-size: 25px;
     font-weight: normal;
 }
+
+/*Adaptation pour les grands écrans*/
 
 @media (min-width:1600px) {
     main .container div.photo {

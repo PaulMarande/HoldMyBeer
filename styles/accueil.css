@@ -19,6 +19,8 @@ main p {
     color: transparent;
 }
 
+/*Mise en page de la présentation du site*/
+
 main div.principal {
     padding: 60px;
     width: 100%;
@@ -31,9 +33,9 @@ main div.principal {
     text-align: center;
 }
 
-main div.principal h1,
-h2,
-h3 {
+/*Mise en page du texte*/
+
+main div.principal h1, h2, h3 {
     font-weight: lighter;
     margin: 0 10px;
 }
@@ -50,6 +52,8 @@ main div.principal h3 {
     font-size: 5vw;
 }
 
+/*Petite barre de séparation*/
+
 main div.principal .ligne {
     background-color: white;
     width: 60%;
@@ -57,6 +61,8 @@ main div.principal .ligne {
     margin-left: 20%;
     margin-top: 30px;
 }
+
+/*Mise en page des trois boites du haut*/
 
 main div.ongletDiv {
     margin-top: 200px;
@@ -67,6 +73,8 @@ main div.ongletDiv {
     height: auto;
 }
 
+/*Mise en page des deux boites du bas*/
+
 main div.ongletDiv2 {
     margin-bottom: 100px;
     display: flex;
@@ -75,6 +83,8 @@ main div.ongletDiv2 {
     width: 100%;
     height: auto;
 }
+
+/*Couleur et fond de la boite*/
 
 main .onglet {
     width: 30%;
@@ -87,8 +97,9 @@ main .onglet {
     cursor: pointer;
 }
 
-main .onglet p,
-.onglet h1 {
+/*Mise en page des titres*/
+
+main .onglet p, .onglet h1 {
     color: #170D0B;
 }
 
@@ -103,15 +114,21 @@ main .onglet p {
     font-size: 2vw;
 }
 
+/*Mouvement de la boite lorsque l'on passe la souris dessus*/
+
 main .onglet:hover {
     box-shadow: 5px 5px 0 0 rgba(255, 255, 255, 0.5);
     transform: translate(5px, 5px);
 }
 
+/*Mouvement de la boite lorsque l'on clique dessus*/
+
 main .onglet:active {
     box-shadow: none;
     transform: translate(10px, 10px);
 }
+
+/*Adaptation de la page aux petits écrans*/
 
 @media (max-width: 500px) {
     main div.principal h1 {

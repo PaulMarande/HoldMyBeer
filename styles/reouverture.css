@@ -34,7 +34,6 @@ main ul li {
     top: 40px;
 }
 
-
 /*Pour l'affichage des titres*/
 
 .text {
@@ -43,25 +42,25 @@ main ul li {
     padding: 10% 0px 0px 30%;
 }
 
-
 /* Affichage des cadres decompteurs */
 
 .horloge {
     border: solid;
     width: fit-content;
-    margin-left: 20%;
+    margin-left: 30%;
+    display: block inline;
 }
 
 .horloge2 {
     border: solid;
     width: fit-content;
-    margin-left: 20%;
+    margin-left: 30%;
+    display: block inline;
 }
 
 main div {
     margin-bottom: 5%;
 }
-
 
 /* Affichage des decompteurs */
 
@@ -85,7 +84,6 @@ main div {
     text-align: right;
 }
 
-
 /* découpage des différentes parties de décompteurs */
 
 div.text_horloge {
@@ -103,27 +101,43 @@ div.nbr_horloge {
     text-align: right;
 }
 
-
 /* Affichage du texte pour les bars */
 
 .bars {
-    padding-top: 0%;
+    margin-left: 20%;
     font-size: 40px;
     width: fit-content;
     display: flex;
     position: sticky;
     text-align: left;
-    top: 10px;
+    background-color: rgba(255, 175, 175, 0.1);
+    border-radius: 5px;
+    padding: 1%;
+}
+
+.text_bar {
+    margin-left: 20%;
+    font-size: 30px;
+    display: inline-flex;
+    position: sticky;
+    width: fit-content;
+    padding: 2%;
     background-color: rgba(255, 175, 175, 0.1);
     border-radius: 5px;
 }
 
-.text_bar {
-    font-size: 30px;
-    display: inline-flex;
-    width: fit-content;
-    position: relative;
-    padding: 2%;
-    background-color: rgba(255, 175, 175, 0.1);
-    border-radius: 5px;
+/* pour des tailles d'écran plus petit */
+
+@media(max-width:800px) {
+    .horloge, .horloge2 {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        margin-left: 40%;
+    }
+    .bars {
+        margin-left: 0%;
+    }
+    .text_bar {
+        margin-left: 0%;
+    }
 }

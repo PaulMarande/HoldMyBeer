@@ -1,3 +1,5 @@
+/*Mise en page du pied de page*/
+
 .footer {
     background-color: #170D0B;
     width: 100%;
@@ -9,20 +11,28 @@
     bottom: 0;
 }
 
+/*Mise en page des liens*/
+
 .footer a {
     line-height: 1.4;
     color: white;
     text-decoration: none;
 }
 
+/*Liens du bas de page à droite*/
+
 .footer .footer-right p {
     color: white;
 }
+
+/*Mise en page des liens*/
 
 .footer a {
     display: inline-block;
     position: relative;
 }
+
+/*Barre cachée sous les liens*/
 
 .footer a::before {
     content: "";
@@ -37,17 +47,20 @@
     transition: all 0.3s ease-in-out 0s;
 }
 
+/*Barre visible sous les liens*/
+
 .footer a:hover::before {
     visibility: visible;
     transform: scaleX(1);
 }
 
+/*Adaptation pour les petits écrans*/
+
 @media (max-width: 800px) {
     iframe {
         height: 220px;
     }
-    .footer .footer-left,
-    .footer-distributed .footer-right {
+    .footer .footer-left, .footer-distributed .footer-right {
         text-align: center;
         width: 100%;
         flex-flow: row nowrap;
@@ -68,6 +81,8 @@
         padding-left: 3px;
     }
 }
+
+/*Adaptation pour les très petits écrans*/
 
 @media (max-width: 530px) {
     .footer-left {

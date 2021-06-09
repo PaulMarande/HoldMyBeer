@@ -2,9 +2,7 @@
     --font-main: Medula One;
 }
 
-*,
- ::before,
- ::after {
+*, ::before, ::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -20,9 +18,13 @@ header {
     z-index: 1000;
 }
 
+/*Opacité du header*/
+
 header.opacity {
     opacity: 0.5;
 }
+
+/*Mise en page du logo et du menu "Burger"*/
 
 header .nav_wrapper {
     display: flex;
@@ -32,6 +34,8 @@ header .nav_wrapper {
     padding: 10px;
     opacity: 0.9;
 }
+
+/*Mise en page du menu Burger*/
 
 header .box {
     margin: 10px;
@@ -79,11 +83,9 @@ header .box .ligne:nth-child(3) {
     top: 35px;
 }
 
-
 /* Animation */
 
-header .ligne:nth-child(1),
-.ligne:nth-child(3) {
+header .ligne:nth-child(1), .ligne:nth-child(3) {
     transform: rotate(0deg);
     transition: transform 0.4s ease-in-out, top 0.4s 0.4s ease-in-out;
 }
@@ -119,6 +121,8 @@ header p.active {
     display: none;
 }
 
+/*Mise en page du menu à gauche*/
+
 header ul {
     position: absolute;
     background-color: white;
@@ -130,12 +134,16 @@ header ul {
     z-index: 30;
 }
 
+/*Mise en page des liens*/
+
 header a {
     text-decoration: none;
     color: #170D0B;
     display: flex;
     align-items: center;
 }
+
+/*Mise en page du menu lorsque l'écran est grand*/
 
 header ul.active {
     display: block;
@@ -147,8 +155,7 @@ header li {
     margin: 0px 3px;
 }
 
-header li:hover,
-.here {
+header li:hover, .here {
     font-weight: bold;
 }
 
@@ -156,7 +163,6 @@ header li.separation {
     background-color: transparent;
     display: none;
 }
-
 
 /* Bouton TOP */
 
@@ -181,8 +187,7 @@ header li.separation {
     transition-property: background-color, color;
 }
 
-#back-to-top-btn:hover,
-#back-to-top-btn:focus {
+#back-to-top-btn:hover, #back-to-top-btn:focus {
     background-color: #333;
     color: #fff;
 }
@@ -220,12 +225,10 @@ header li.separation {
     }
 }
 
-
-/* Grand écran (>800px) */
+/* Grand écran (>950px) */
 
 @media (min-width: 950px) {
-    header .box,
-    .boxMenu {
+    header .box, .boxMenu {
         display: none;
     }
     header ul {
@@ -243,8 +246,7 @@ header li.separation {
     header p.logoName {
         display: none;
     }
-    header li:hover,
-    .here {
+    header li:hover, .here {
         background-color: rgb(235, 229, 222);
         font-weight: normal;
     }

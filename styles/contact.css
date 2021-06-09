@@ -1,3 +1,5 @@
+/*Image de fond*/
+
 body {
     background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 1, 0.3)), url("../images/fondContact.JPG");
     background-attachment: fixed;
@@ -5,9 +7,13 @@ body {
     width: 100%;
 }
 
+/*Décaler le reste de la page du header*/
+
 main {
     padding-top: 115px;
 }
+
+/*Centrer les éléments*/
 
 .container {
     display: flex;
@@ -15,8 +21,7 @@ main {
     padding: 50px;
 }
 
-
-/* Container left */
+/*Mise en forme de tout ce qui est à gauche*/
 
 .container__left {
     display: flex;
@@ -25,6 +30,8 @@ main {
     max-width: 500px;
     font-size: 3vw;
 }
+
+/*Mise en forme du texte "nous contacter"*/
 
 .container__left--heading {
     height: 50%;
@@ -35,10 +42,7 @@ main {
     font-size: 50px;
 }
 
-.container__left .container__left--heading p {
-    margin: 20px 0;
-    color: #f1f1f1;
-}
+/*La bulle orange*/
 
 .container__left .bubble-container {
     position: relative;
@@ -47,6 +51,9 @@ main {
     padding: 15px;
     color: #fff;
 }
+
+/*Le petit triangle sous la bulle pour donner 
+l'aspect d'une bulle de dialoque*/
 
 .container__left .bubble-container::after {
     content: "";
@@ -59,8 +66,7 @@ main {
     background: #ff4618;
 }
 
-
-/* Container Form */
+/* Mise en forme du formulaire */
 
 form {
     display: block;
@@ -75,10 +81,14 @@ form {
     font-size: 2.5vw;
 }
 
+/*Mise en page du titre h2*/
+
 form h2 {
     font-size: 35px;
     margin-bottom: 60px;
 }
+
+/*Mise en page des input*/
 
 form .form-control {
     position: relative;
@@ -99,6 +109,8 @@ form .form-control input {
     font-size: 2vw;
 }
 
+/*Si ce qui est entré n'est pas valide*/
+
 form .form-control input.alert-input {
     border-bottom: 2px solid crimson;
 }
@@ -109,10 +121,11 @@ form .form-control label {
     transition: all 0.3s ease-in;
 }
 
-form .form-control input:focus+label,
-form .form-control input.active-input+label {
+form .form-control input:focus+label, form .form-control input.active-input+label {
     transform: translateY(-40px);
 }
+
+/*Mise en page des boutons radio*/
 
 .content-form-radio {
     margin-top: 20px;
@@ -132,6 +145,8 @@ form .form-control input.active-input+label {
     margin-right: 10px;
 }
 
+/*Mise en forme du bouton "Envoyer"*/
+
 form button {
     display: block;
     width: 100%;
@@ -144,6 +159,8 @@ form button {
     font-size: 22px;
     cursor: pointer;
 }
+
+/*Mise en forme du tableau avec les messages envoyés*/
 
 .table_wrapper {
     display: block;
@@ -184,6 +201,8 @@ caption {
     padding: 10px 10px;
 }
 
+/*Adaptation pour les plus petits écrans*/
+
 @media screen and (max-width: 1141px) {
     body {
         height: 100%;
@@ -214,6 +233,7 @@ caption {
     }
 }
 
+/*Adaptation pour les écrans entre 320px et 600px*/
 @media screen and (min-width: 320px) and (max-width: 600px) {
     form {
         padding: 30px;

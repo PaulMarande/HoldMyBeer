@@ -10,7 +10,6 @@ function getChrono() {
 	const hours = Math.floor((distanceBase % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
 	const minutes = Math.floor((distanceBase % (1000 * 60 * 60)) / (1000 * 60))
 	const seconds = Math.floor((distanceBase % (1000 * 60)) / (1000))
-	//console.log(days,hours,minutes,seconds);
 
 	text.innerHTML = "<div class='nbr_horloge'>" + days + "</div><div class='text_horloge'>jours</div> <div class='nbr_horloge'>" + hours + "</div><div class='text_horloge' >heures</div><div class='nbr_horloge'>" + minutes + "</div><div class='text_horloge' >minutes</div> <div class='nbr_horloge'>" + seconds + "</div><div class='text_horloge'>secondes</div>"
 }
@@ -31,7 +30,6 @@ function getChrono2() {
 	const hours = Math.floor((distanceBase % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
 	const minutes = Math.floor((distanceBase % (1000 * 60 * 60)) / (1000 * 60))
 	const seconds = Math.floor((distanceBase % (1000 * 60)) / (1000))
-	//console.log(days,hours,minutes,seconds);
 
 	text.innerHTML = "<div class='nbr_horloge'>" + days + "</div><div class='text_horloge'>jours</div> <div class='nbr_horloge'>" + hours + "</div><div class='text_horloge' >heures</div><div class='nbr_horloge'>" + minutes + "</div><div class='text_horloge' >minutes</div> <div class='nbr_horloge'>" + seconds + "</div><div class='text_horloge'>secondes</div>"
 

@@ -1,6 +1,8 @@
+//Si l'utilisateur scroll vers le bas la header change
 const theHeader = document.querySelector(".main_header")
 window.onscroll = function () {
 
+  //Si on scroll de 30px le header deviens plus transparent
   if (document.documentElement.scrollTop > 30) {
     theHeader.style.opacity = "0.6";
   }
@@ -21,6 +23,7 @@ const backToTopButton = document.querySelector("#back-to-top-btn");
 
 window.addEventListener("scroll", scrollFunction);
 
+//Montrer ou cacher le bouton "retour en haut"
 function scrollFunction() {
   if (window.pageYOffset > 300) { // Show backToTopButton
     if (!backToTopButton.classList.contains("btnEntrance")) {
@@ -40,12 +43,10 @@ function scrollFunction() {
   }
 }
 
+//Si l'utilisateur click sur le bouton "retour en haut"
 backToTopButton.addEventListener("click", smoothScrollBackToTop);
 
-// function backToTop() {
-//   window.scrollTo(0, 0);
-// }
-
+//fonction pour animer le retour en haut
 function smoothScrollBackToTop() {
   const targetPosition = 0;
   const startPosition = window.pageYOffset;
