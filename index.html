@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="styles/header.css" />
+    <link rel="stylesheet" type="text/css" href="styles/accueil.css" />
+    <link rel="stylesheet" type="text/css" href="styles/footer.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Medula+One&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HoldMyBeer</title>
+</head>
+
+<body>
+    <header class="main_header">
+        <nav class="main_navigation">
+            <div class="nav_wrapper">
+                <a href="index.html">
+                    <img src="images/Logo.svg" alt="Logo du site, une bière" width="75" height="75" />
+                    <p class="logoName">HoldMyBeer</p>
+                </a>
+                <p class="boxMenu">Menu</p>
+                <div class="box">
+                    <div class="container-lignes">
+                        <div class="ligne"></div>
+                        <div class="ligne"></div>
+                        <div class="ligne"></div>
+                    </div>
+                </div>
+            </div>
+            <ul class="lienMenu">
+                <li id="nav_bieres"><a href="bieres.html">Bières</a></li>
+                <li class="separation"> | </li>
+                <li id="nav_vins"><a href="vins.html">Vins</a></li>
+                <li class="separation"> | </li>
+                <li id="nav_cocktails"><a href="cocktails.html">Cocktails</a></li>
+                <li class="separation"> | </li>
+                <li id="nav_reouverture"><a href="reouverture.html">Réouverture J-</a></li>
+                <li class="separation"> | </li>
+                <li id="nav_addition"><a href="addition.html">L'addition SVP</a></li>
+                <li class="separation"> | </li>
+                <li id="nav_contact"><a href="contact.html">Nous Contacter</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!--Présentation du site-->
+        <div class="principal">
+            <h1>Welcome to HoldMyBeer</h1>
+            <h3>Not a cocktails bar, not a wine bar, not a beer bar</h3>
+            <h2>Your drinking bar</h2>
+            <div class="ligne"></div>
+        </div>
+
+        <!--Boite de présentation des bières-->
+        <div class="ongletDiv">
+            <div class="onglet" onClick="window.location.href='bieres.html';">
+                <h1>Bières</h1>
+                <p>Retrouvez notre sélection de bières ainsi qu'une pésentation de leurs origines et de leur méthode de
+                    fabrication</p>
+            </div>
+
+            <!--Boite de présentation des vins-->
+            <div class="onglet" onClick="window.location.href='vins.html';">
+                <h1>Vins</h1>
+                <p>Selon les trois types de vins, nous vous proposons un guide de dégustation ainsi qu'une présentation
+                    de leurs origines</p>
+            </div>
+
+            <!--Boite de présentation des cocktails-->
+            <div class="onglet" onClick="window.location.href='cocktails.html';">
+                <h1>Cocktails</h1>
+                <p>Nous vous proposons de revoir vos classiques avec ou sans alcool. Vous découvrez les secrets de vos
+                    cocktails préférés.</p>
+            </div>
+        </div>
+        <div class="ongletDiv2">
+            <!--Boite de présentation de la page réouverture-->
+            <div class="onglet" onClick="window.location.href='reouverture.html';">
+                <h1>Réouverture J-</h1>
+                <p>Venez compter les jours avec nous avant la réouverture totale des bars et restaurants</p>
+            </div>
+
+            <!--Boite présentation de l'addition SVP-->
+            <div class="onglet" onClick="window.location.href='addition.html';">
+                <h1>L'addition SVP</h1>
+                <p>Nous calculons pour vous le coût moyen de vos consommations (à la capitale)</p>
+            </div>
+        </div>
+        <button id="back-to-top-btn">↑</button>
+    </main>
+    <footer class="footer">
+        <div class="footer-left">
+            <a href="https://www.efrei.fr/"> © </a>
+            <a href="https://www.linkedin.com/in/antoine-cassaigne-3039261a0/" target="_blank">Antoine Cassaigne ·</a>
+            <a href="https://www.linkedin.com/in/marine-c%C3%A9l%C3%A9rault-0145901a0/" target=_blank>Marine Celeraut
+                ·</a>
+            <a href="https://www.linkedin.com/in/paul-marande-429733177" target=_blank>Paul Marande</a>
+        </div>
+        <div class="footer-right">
+            <p class="footer-links">
+                <a href="index.html">Accueil</a>
+                ·
+                <a href="propos.html">A propos</a>
+                ·
+                <a href="contact.html">Nous contacter</a>
+            </p>
+        </div>
+
+    </footer>
+    <script src="scripts/header.js"></script>
+</body>
+
+</html>
